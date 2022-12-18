@@ -21,10 +21,10 @@ let delay3 = 0;
 let delay4 = 10;
 
 const finishCount = 100;
-const finishMsg = 'Done!';
+const finishMsg = "";
 
 const breakInterval = 25; // break after 25 laps
-const breakDuration = 600; // 10 min break
+const breakDuration = 300; // 5 min break
 let breakFlag1 = false;
 let breakFlag2 = false;
 let breakFlag3 = false;
