@@ -1,0 +1,171 @@
+:root {
+	--primary: #DC143C;
+	--dark: #1F2937;
+	--darkdark: #111827;
+	--light: #F3F4F6;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Fira sans', sans-serif;
+}
+
+body {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+.controls button {
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+
+	margin: 0 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+
+	color: #FFF;
+	background-color: var(--primary);
+
+	transition: 0.4s;
+	user-select: none;
+}
+
+.controls button:hover {
+	opacity: 0.7;
+}
+
+.controls button:active {
+	background-color: var(--dark);
+}
+
+.watch1 {
+	text-align: center;
+	background-color: var(--darkdark);
+	width: 100%;
+	float: left;
+	max-width: 500px;
+	margin: 4rem auto;
+	margin-left: 10rem;
+	margin-right: 3rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.watch1 .lane {
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch1 .time {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch1 .count {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch2 {
+	text-align: center;
+	background-color: var(--darkdark);
+	width: 100%;
+	float: left;
+	max-width: 500px;
+	margin: 4rem auto;
+	margin-right: 3rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.watch2 .lane {
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch2 .time {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch2 .count {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch3 {
+	text-align: center;
+	background-color: var(--darkdark);
+	width: 100%;
+	float: left;
+	max-width: 500px;
+	margin: 4rem auto;
+	margin-right: 3rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.watch3 .lane {
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch3 .time {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch3 .count {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch4 {
+	text-align: center;
+	background-color: var(--darkdark);
+	width: 100%;
+	float: left;
+	max-width: 500px;
+	margin: 4rem auto;
+	margin-right: 3rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.watch4 .lane {
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch4 .time {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.watch4 .count {
+	font-size: 5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
