@@ -11,8 +11,18 @@ const start_btn = document.getElementById("start");
 const stop_btn = document.getElementById("stop");
 const reset_btn = document.getElementById("reset");
 
+let startFlag1 = true;
+let startFlag2 = true;
+let startFlag3 = true;
+let startFlag4 = true;
+let delay1 = 0;
+let delay2 = 0;
+let delay3 = 0;
+let delay4 = 10;
+
 const finishCount = 100;
 const finishMsg = 'Done!';
+
 const breakInterval = 25; // break after 25 laps
 const breakDuration = 600; // 10 min break
 let breakFlag1 = false;
@@ -20,11 +30,11 @@ let breakFlag2 = false;
 let breakFlag3 = false;
 let breakFlag4 = false;
 
+let interval = null;
 let seconds1 = 0;
 let seconds2 = 0;
 let seconds3 = 0;
 let seconds4 = 0;
-let interval = null;
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
@@ -32,8 +42,8 @@ let count4 = 0;
 
 // 'Abgangszeiten'
 let depTime1 = 120; // 2:00
-let depTime2 = 130; // 2:10
-let depTime3 = 140; // 2:20
+let depTime2 = 135; // 2:15
+let depTime3 = 135; // 2:15
 let depTime4 = 150; // 2:30
 
 // Event listeners
@@ -61,18 +71,29 @@ function timer() {
 	seconds4++;
 
 	// Lane 1
+	// Delay
+	if (startFlag1 && seconds1 < delay1) {
+		time_el1.innerText = `Start in ${formatTime(delay1 - seconds1)}`;
+		count_el1.innerText = "";
+	}
+	else if (startFlag1 && seconds1 == delay1) {
+		time_el1.innerText = "00:00";
+		count_el1.innerText = `${count1}`;
+		startFlag1 = false;
+		seconds1 = 0;
+    }
 	// Done
-	if (count1 == finishCount)
+	else if (count1 == finishCount)
 		time_el1.innerText = finishMsg;
 	// Break step
 	else if (breakFlag1 && seconds1 < breakDuration) {
-		time_el1.innerText = `${formatTime(breakDuration - seconds1)} Pause`;
+		time_el1.innerText = `Pause ${formatTime(breakDuration - seconds1)}`;
 	}
 	else if (breakFlag1 && seconds1 == breakDuration) {
 		time_el1.innerText = "00:00";
 		breakFlag1 = false;
 		seconds1 = 0;
-    }
+	}
 	// Regular step
 	else if (seconds1 < depTime1)
 		time_el1.innerText = `${formatTime(seconds1)}`;
@@ -80,7 +101,7 @@ function timer() {
 	else {
 		count1++;
 		if (count1 && !(count1 % breakInterval)) {
-			time_el1.innerText = `${formatTime(breakDuration)} Pause`;
+			time_el1.innerText = `Pause ${formatTime(breakDuration)}`;
 			breakFlag1 = true;
 		}
 		else
@@ -91,10 +112,20 @@ function timer() {
 
 
 	// Lane 2
-	if (count2 == finishCount)
+	if (startFlag2 && seconds2 < delay2) {
+		time_el2.innerText = `Start in ${formatTime(delay2 - seconds2)}`;
+		count_el2.innerText = "";
+	}
+	else if (startFlag2 && seconds2 == delay2) {
+		time_el2.innerText = "00:00";
+		count_el2.innerText = `${count2}`;
+		startFlag2 = false;
+		seconds2 = 0;
+	}
+	else if (count2 == finishCount)
 		time_el2.innerText = finishMsg;
 	else if (breakFlag2 && seconds2 < breakDuration) {
-		time_el2.innerText = `${formatTime(breakDuration - seconds2)} Pause`;
+		time_el2.innerText = `Pause ${formatTime(breakDuration - seconds2)}`;
 	}
 	else if (breakFlag2 && seconds2 == breakDuration) {
 		time_el2.innerText = "00:00";
@@ -106,7 +137,7 @@ function timer() {
 	else {
 		count2++;
 		if (count2 && !(count2 % breakInterval)) {
-			time_el2.innerText = `${formatTime(breakDuration)} Pause`;
+			time_el2.innerText = `Pause ${formatTime(breakDuration)}`;
 			breakFlag2 = true;
 		}
 		else
@@ -116,10 +147,20 @@ function timer() {
 	}
 
 	// Lane 3
-	if (count3 == finishCount)
+	if (startFlag3 && seconds3 < delay3) {
+		time_el3.innerText = `Start in ${formatTime(delay3 - seconds3)}`;
+		count_el3.innerText = "";
+	}
+	else if (startFlag3 && seconds3 == delay3) {
+		time_el3.innerText = "00:00";
+		count_el3.innerText = `${count3}`;
+		startFlag3 = false;
+		seconds3 = 0;
+	}
+	else if (count3 == finishCount)
 		time_el3.innerText = finishMsg;
 	else if (breakFlag3 && seconds3 < breakDuration) {
-		time_el3.innerText = `${formatTime(breakDuration - seconds3)} Pause`;
+		time_el3.innerText = `Pause ${formatTime(breakDuration - seconds3)}`;
 	}
 	else if (breakFlag3 && seconds3 == breakDuration) {
 		time_el3.innerText = "00:00";
@@ -131,7 +172,7 @@ function timer() {
 	else {
 		count3++;
 		if (count3 && !(count3 % breakInterval)) {
-			time_el3.innerText = `${formatTime(breakDuration)} Pause`;
+			time_el3.innerText = `Pause ${formatTime(breakDuration)}`;
 			breakFlag3 = true;
 		}
 		else
@@ -141,10 +182,20 @@ function timer() {
 	}
 
 	// Lane 4
-	if (count4 == finishCount)
+	if (startFlag4 && seconds4 < delay4) {
+		time_el4.innerText = `Start in ${formatTime(delay4 - seconds4)}`;
+		count_el4.innerText = "";
+	}
+	else if (startFlag4 && seconds4 == delay4) {
+		time_el4.innerText = "00:00";
+		count_el4.innerText = `${count4}`;
+		startFlag4 = false;
+		seconds4 = 0;
+	}
+	else if (count4 == finishCount)
 		time_el4.innerText = finishMsg;
 	else if (breakFlag4 && seconds4 < breakDuration) {
-		time_el4.innerText = `${formatTime(breakDuration - seconds4)} Pause`;
+		time_el4.innerText = `Pause ${formatTime(breakDuration - seconds4)}`;
 	}
 	else if (breakFlag4 && seconds4 == breakDuration) {
 		time_el4.innerText = "00:00";
@@ -156,7 +207,7 @@ function timer() {
 	else {
 		count4++;
 		if (count4 && !(count4 % breakInterval)) {
-			time_el4.innerText = `${formatTime(breakDuration)} Pause`;
+			time_el4.innerText = `Pause ${formatTime(breakDuration)}`;
 			breakFlag4 = true;
 		}
 		else
@@ -171,6 +222,9 @@ function start() {
 		return
 	}
 
+	delay1 = finishCount * (depTime4 - depTime1) + delay4;
+	delay2 = finishCount * (depTime4 - depTime2) + delay4;
+	delay3 = finishCount * (depTime4 - depTime3) + delay4;
 	interval = setInterval(timer, 1000);
 }
 
@@ -193,6 +247,10 @@ function reset () {
 	breakFlag2 = false;
 	breakFlag3 = false;
 	breakFlag4 = false;
+	startFlag1 = true;
+	startFlag2 = true;
+	startFlag3 = true;
+	startFlag4 = true;
 	time_el1.innerText = '00:00';
 	count1 = 0;
 	count_el1.innerText = '0';
