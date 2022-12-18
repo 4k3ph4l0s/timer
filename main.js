@@ -171,7 +171,7 @@ function start() {
 		return
 	}
 
-	interval = setInterval(timer, 10); // reset to 1000 for real time
+	interval = setInterval(timer, 1000);
 }
 
 function stop() {
