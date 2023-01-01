@@ -135,7 +135,6 @@ function start() {
 	}
 
 	delay1 = finishCount * (depTime2 - depTime1) + delay2;
-	interval = setInterval(timer, 10);
 	interval = setInterval(timer, 1000);
 }
 
