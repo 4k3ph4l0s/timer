@@ -10,7 +10,7 @@ const reset_btn = document.getElementById("reset");
 let startFlag1 = true;
 let startFlag2 = true;
 let delay1 = 0;
-let delay2 = 10;
+let delay2 = 900; // 15 min countdown
 
 const finishCount = 100;
 const finishMsg = "";
