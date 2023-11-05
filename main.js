@@ -41,10 +41,10 @@ let count3 = 0;
 let count4 = 0;
 
 // 'Abgangszeiten'
-let depTime1 = 120; // 2:00
-let depTime2 = 135; // 2:15
+let depTime1 = 110; // 1:50
+let depTime2 = 120; // 2:00
 let depTime3 = 135; // 2:15
-let depTime4 = 135; // 2:15
+let depTime4 = 150; // 2:30
 
 // Event listeners
 start_btn.addEventListener("click", start);
@@ -265,4 +265,15 @@ function reset () {
 	count_el4.innerText = '0';
 
 	start_btn.innerText = 'Start';
+}
+
+window.onload = function() {
+	let depTime1Str = formatTime(depTime1).slice(1);
+	let depTime2Str = formatTime(depTime2).slice(1);
+	let depTime3Str = formatTime(depTime3).slice(1);
+	let depTime4Str = formatTime(depTime4).slice(1);
+	document.getElementById("depTime1").innerText = depTime1Str;
+	document.getElementById("depTime2").innerText = depTime2Str;
+	document.getElementById("depTime3").innerText = depTime3Str;
+	document.getElementById("depTime4").innerText = depTime4Str;
 }
