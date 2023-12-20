@@ -44,7 +44,7 @@ let count4 = 0;
 let depTime1 = 110; // 1:50
 let depTime2 = 120; // 2:00
 let depTime3 = 135; // 2:15
-let depTime4 = 150; // 2:30
+let depTime4 = 135; // 2:15
 
 // Event listeners
 start_btn.addEventListener("click", start);
