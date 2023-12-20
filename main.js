@@ -1,12 +1,12 @@
 // Global variables
-const time_el1 = document.querySelector('.watch1 .time');
-const count_el1 = document.querySelector('.watch1 .count');
-const time_el2 = document.querySelector('.watch2 .time');
-const count_el2 = document.querySelector('.watch2 .count');
-const time_el3 = document.querySelector('.watch3 .time');
-const count_el3 = document.querySelector('.watch3 .count');
-const time_el4 = document.querySelector('.watch4 .time');
-const count_el4 = document.querySelector('.watch4 .count');
+const time_el1 = document.querySelector('#watch1 .time');
+const count_el1 = document.querySelector('#watch1 .count');
+const time_el2 = document.querySelector('#watch2 .time');
+const count_el2 = document.querySelector('#watch2 .count');
+const time_el3 = document.querySelector('#watch3 .time');
+const count_el3 = document.querySelector('#watch3 .count');
+const time_el4 = document.querySelector('#watch4 .time');
+const count_el4 = document.querySelector('#watch4 .count');
 const start_btn = document.getElementById("start");
 const stop_btn = document.getElementById("stop");
 const reset_btn = document.getElementById("reset");
@@ -225,7 +225,7 @@ function start() {
 	delay1 = finishCount * (depTime4 - depTime1) + delay4;
 	delay2 = finishCount * (depTime4 - depTime2) + delay4;
 	delay3 = finishCount * (depTime4 - depTime3) + delay4;
-	interval = setInterval(timer, 1000);
+	interval = setInterval(timer, 10);
 }
 
 function stop() {

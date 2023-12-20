@@ -49,15 +49,22 @@ body {
 	background-color: var(--dark);
 }
 
-.watch1 {
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.watch {
 	text-align: center;
 	background-color: var(--light);
 	width: 100%;
 	float: left;
 	max-width: 500px;
-	margin: 4rem auto;
-	margin-left: 10rem;
-	margin-right: 3rem;
+	margin: 2rem auto;
+	margin-left: 2rem;
+	margin-right: 2rem;
 	padding: 1rem 2rem;
 	border: solid;
 	border-width: 5px;
@@ -65,118 +72,19 @@ body {
 	border-color: var(--darkdark)
 }
 
-.watch1 .lane {
+.watch .lane {
 	font-size: 2rem;
 	font-weight: 300;
 	margin-bottom: 1rem;
 }
 
-.watch1 .time {
+.watch .time {
 	font-size: 5rem;
 	font-weight: 300;
 	margin-bottom: 1rem;
 }
 
-.watch1 .count {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch2 {
-	text-align: center;
-	background-color: var(--light);
-	width: 100%;
-	float: left;
-	max-width: 500px;
-	margin: 4rem auto;
-	margin-right: 3rem;
-	padding: 1rem 2rem;
-	border: solid;
-	border-width: 5px;
-	border-radius: 1rem;
-	border-color: var(--darkdark)
-}
-
-.watch2 .lane {
-	font-size: 2rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch2 .time {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch2 .count {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch3 {
-	text-align: center;
-	background-color: var(--light);
-	width: 100%;
-	float: left;
-	max-width: 500px;
-	margin: 4rem auto;
-	margin-right: 3rem;
-	padding: 1rem 2rem;
-	border: solid;
-	border-width: 5px;
-	border-radius: 1rem;
-	border-color: var(--darkdark)
-}
-
-.watch3 .lane {
-	font-size: 2rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch3 .time {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch3 .count {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch4 {
-	text-align: center;
-	background-color: var(--light);
-	width: 100%;
-	float: left;
-	max-width: 500px;
-	margin: 4rem auto;
-	margin-right: 3rem;
-	padding: 1rem 2rem;
-	border: solid;
-	border-width: 5px;
-	border-radius: 1rem;
-	border-color: var(--darkdark)
-}
-
-.watch4 .lane {
-	font-size: 2rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch4 .time {
-	font-size: 5rem;
-	font-weight: 300;
-	margin-bottom: 1rem;
-}
-
-.watch4 .count {
+.watch .count {
 	font-size: 5rem;
 	font-weight: 300;
 	margin-bottom: 1rem;
