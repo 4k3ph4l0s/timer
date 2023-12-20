@@ -18,7 +18,7 @@ let startFlag4 = true;
 let delay1 = 0;
 let delay2 = 0;
 let delay3 = 0;
-let delay4 = 10;
+let delay4 = 15*60;
 
 const finishCount = 100;
 const finishMsg = "";
