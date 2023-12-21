@@ -225,7 +225,7 @@ function start() {
 	delay1 = finishCount * (depTime4 - depTime1) + delay4;
 	delay2 = finishCount * (depTime4 - depTime2) + delay4;
 	delay3 = finishCount * (depTime4 - depTime3) + delay4;
-	interval = setInterval(timer, 10);
+	interval = setInterval(timer, 1000);
 }
 
 function stop() {
