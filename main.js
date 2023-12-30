@@ -222,9 +222,9 @@ function start() {
 		return
 	}
 
-	delay1 = finishCount * (depTime4 - depTime1) + delay4;
-	delay2 = finishCount * (depTime4 - depTime2) + delay4;
-	delay3 = finishCount * (depTime4 - depTime3) + delay4;
+	delay1 = finishCount * (depTime4 - depTime1) + delay4 - (depTime4 - depTime1);
+	delay2 = finishCount * (depTime4 - depTime2) + delay4 - (depTime4 - depTime2);
+	delay3 = finishCount * (depTime4 - depTime3) + delay4 - (depTime4 - depTime3);
 	interval = setInterval(timer, 1000);
 }
 
