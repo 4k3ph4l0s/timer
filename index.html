@@ -2,70 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timer</title>
-
-  <link rel="stylesheet" href="light.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="controls">
     <button id="start">Start</button>
     <button id="stop">Pause</button>
     <button id="reset">Reset</button>
   </div>
 
-  <div class="row">
-    <div class="watch" id="watch1">
-      <div class="lane">
-        Bahn 1 (<span id="depTime1">2:00</span>)
-      </div>
-      <div class="time">
-        00:00
-      </div>
-      <div class="count">
-        0
-      </div>
-    </div>
-
-    <div class="watch" id="watch2">
-      <div class="lane">
-        Bahn 2 (<span id="depTime2">2:00</span>)
-      </div>
-      <div class="time">
-        00:00
-      </div>
-      <div class="count">
-        0
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="watch" id="watch3">
-      <div class="lane">
-        Bahn 3 (<span id="depTime3">2:00</span>)
-      </div>
-      <div class="time">
-        00:00
-      </div>
-      <div class="count">
-        0
-      </div>
-    </div>
-
-    <div class="watch" id="watch4">
-      <div class="lane">
-        Bahn 4 (<span id="depTime4">2:00</span>)
-      </div>
-      <div class="time">
-        00:00
-      </div>
-      <div class="count">
-        0
-      </div>
-    </div>
+  <div class="timer-grid">
+    <!-- Dynamically populated by JavaScript -->
   </div>
 
   <script src="main.js"></script>
